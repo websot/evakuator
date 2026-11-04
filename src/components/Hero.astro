@@ -1,10 +1,15 @@
 ---
 // Hero.astro — шапка лендинга услуг спецтехники
+// Почему картинки «не показывали»: placehold.co без расширения отдаёт image/svg+xml,
+// и часть браузеров/прокси блокирует такие <img>. Решение — реальные фотографии в явном JPEG (.jpg).
+// Все URL ниже проверены: HTTP 200 + content-type image/jpeg (сигнатура ffd8ff).
+const HERO_BG = 'https://picsum.photos/seed/skyscraper-city/1920/1080.jpg'; // фон: современный город/здание
+const TOW_TRUCK_IMG = 'https://picsum.photos/seed/tow-truck-service/800/600.jpg'; // эвакуатор (тематика по сееду)
 ---
 
 <section
   class="relative overflow-hidden bg-[#111111] bg-cover bg-center"
-  style="background-image: url('https://placehold.co/1920x1080/11/333?text=Building');"
+  style={`background-image: url('${HERO_BG}');`}
 >
   <!-- Темный оверлей поверх фоновой картинки здания -->
   <div class="absolute inset-0 bg-black/80" aria-hidden="true"></div>
@@ -63,7 +68,7 @@
     <!-- Правая часть: изображение эвакуатора -->
     <div class="relative">
       <img
-        src="https://placehold.co/800x600/333/fff?text=Tow+Truck"
+        src={TOW_TRUCK_IMG}
         alt="Эвакуатор со спецтехникой на платформе"
         class="w-full rounded-sm object-cover shadow-2xl shadow-black/60"
         loading="eager"

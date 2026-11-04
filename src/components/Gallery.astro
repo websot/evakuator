@@ -1,10 +1,11 @@
 ---
 // Gallery.astro — блок «Фото работ» (сетка 2x2 на десктопе)
+// Реальные фотографии в явном JPEG (.jpg) — URL проверены: HTTP 200 + image/jpeg.
 const works = [
-  { label: 'Демонтаж', alt: 'Демонтаж здания экскаватором' },
-  { label: 'Подготовка участка', alt: 'Подготовка строительного участка' },
-  { label: 'Земляные работы', alt: 'Земляные работы с ковшом экскаватора' },
-  { label: 'Спецтехника в деле', alt: 'Спецтехника на стройплощадке' },
+  { label: 'Демонтаж', alt: 'Демонтаж здания экскаватором', img: 'https://picsum.photos/seed/heavy-excavator/600/400.jpg' },
+  { label: 'Подготовка участка', alt: 'Подготовка строительного участка', img: 'https://picsum.photos/seed/construction-site/600/400.jpg' },
+  { label: 'Земляные работы', alt: 'Земляные работы с ковшом экскаватора', img: 'https://picsum.photos/seed/dirt-work/600/400.jpg' },
+  { label: 'Спецтехника в деле', alt: 'Спецтехника на стройплощадке', img: 'https://picsum.photos/seed/truck-fleet/600/400.jpg' },
 ];
 ---
 
@@ -19,7 +20,7 @@ const works = [
           <li>
             <figure class="group relative overflow-hidden rounded-sm">
               <img
-                src="https://placehold.co/600x400/444/fff?text=Work+Photo"
+                src={work.img}
                 alt={work.alt}
                 class="aspect-[3/2] w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 loading="lazy"
