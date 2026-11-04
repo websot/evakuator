@@ -1,0 +1,90 @@
+---
+// Services.astro — блок «Решаем задачи любой сложности»
+const services = [
+  {
+    title: 'Демонтаж любых объектов',
+    icon: 'excavator',
+  },
+  {
+    title: 'Земляные работы и вывоз грунта',
+    icon: 'dump-truck',
+  },
+  {
+    title: 'Планировка и копка котлованов',
+    icon: 'bucket',
+  },
+  {
+    title: 'Аренда техники с оператором',
+    icon: 'gear',
+  },
+];
+---
+
+<section class="bg-black text-white">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+    <!-- Верхняя часть: желтый блок с черным текстом -->
+    <div class="mb-10 flex justify-start md:mb-14">
+      <h2 class="inline-block bg-yellow-400 px-4 py-3 font-sans text-xl font-extrabold uppercase leading-tight text-black sm:px-6 sm:py-4 sm:text-2xl lg:text-3xl">
+        Решаем задачи<br class="sm:hidden" /> любой сложности
+      </h2>
+    </div>
+
+    <!-- Сетка: 1 колонка (моб.), 2 (планшет), 4 (десктоп) -->
+    <ul class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-y-0">
+      {
+        services.map((service, i) => (
+          <li
+            class:list={[
+              'flex flex-col items-center px-4 text-center lg:px-8',
+              // Тонкие вертикальные разделители: на планшете — у каждой нечетной колонки,
+              // на десктопе — у всех колонок, кроме первой
+              i % 2 === 1 && 'sm:border-l sm:border-zinc-800',
+              i > 0 && 'lg:border-l lg:border-zinc-800',
+            ]}
+          >
+            {/* Иконка-заглушка: экскаватор */}
+            {service.icon === 'excavator' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-yellow-400 sm:h-16 sm:w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 20h16" />
+                <circle cx="7" cy="17" r="2.5" />
+                <circle cx="13" cy="17" r="2.5" />
+                <rect x="4" y="11" width="10" height="4" rx="1" />
+                <path d="M12 11l4-7 4 3-3 4" />
+                <path d="M16 11l2 3h-4z" />
+              </svg>
+            )}
+            {/* Иконка-заглушка: самосвал */}
+            {service.icon === 'dump-truck' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-yellow-400 sm:h-16 sm:w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2 18h18" />
+                <circle cx="7" cy="19" r="2" />
+                <circle cx="17" cy="19" r="2" />
+                <path d="M3 14V8h10l3 6" />
+                <path d="M13 8l2-4h5v10" />
+              </svg>
+            )}
+            {/* Иконка-заглушка: ковш */}
+            {service.icon === 'bucket' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-yellow-400 sm:h-16 sm:w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16l-3 10H7L4 6z" />
+                <path d="M9 3v3M15 3v3M12 3v3" />
+                <path d="M7 16v3h10v-3" />
+              </svg>
+            )}
+            {/* Иконка-заглушка: шестеренка */}
+            {service.icon === 'gear' && (
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-yellow-400 sm:h-16 sm:w-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            )}
+
+            <p class="mt-5 text-sm font-extrabold uppercase leading-snug text-white sm:text-base">
+              {service.title}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

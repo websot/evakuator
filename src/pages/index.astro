@@ -1,0 +1,27 @@
+---
+// index.astro — сборка всех компонентов лендинга услуг спецтехники
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import Gallery from '../components/Gallery.astro';
+import Features from '../components/Features.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Спецтехника для ваших задач: демонтаж, земляные работы, вывоз, благоустройство и аренда. Оперативная подача техники в день обращения." />
+    <title>Спецтехника для ваших задач — Демонтаж, земляные работы, аренда</title>
+  </head>
+  <body class="bg-[#111111] font-sans text-white antialiased">
+    <main>
+      <Hero />
+      <Services />
+      <Gallery />
+      <Features />
+    </main>
+    <Footer />
+  </body>
+</html>
