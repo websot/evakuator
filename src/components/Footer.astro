@@ -1,0 +1,41 @@
+---
+// Footer.astro — блок «Контакты» с пунктирной желтой линией сверху
+---
+
+<footer class="bg-[#111111] text-white">
+  <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
+    <!-- Пунктирная желтая линия-разделитель сверху -->
+    <div class="mb-10 border-t-2 border-dashed border-yellow-400 md:mb-12" aria-hidden="true"></div>
+
+    <!-- Flexbox: колонка на мобильном, строка на десктопе -->
+    <div class="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6">
+      <!-- Слева: кнопка со скошенным (заостренным) правым краем -->
+      <a
+        href="tel:+79113321111"
+        class="inline-block bg-yellow-400 px-6 py-3 font-sans text-sm font-extrabold uppercase tracking-wide text-black transition-colors hover:bg-yellow-300 sm:text-base [clip-path:polygon(0_0,100%_0,calc(100%-16px)_50%,100%_100%,0_100%)]"
+      >
+        Свяжитесь с нами
+      </a>
+
+      <!-- По центру: призыв -->
+      <p class="max-w-xs text-center text-sm text-gray-300 sm:text-base md:max-w-sm md:flex-1">
+        Проконсультируем и подберём решение под ваши задачи!
+      </p>
+
+      <!-- Справа: телефон -->
+      <address class="flex items-center gap-3 not-italic sm:gap-4">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm bg-yellow-400 sm:h-12 sm:w-12">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </span>
+        <a
+          href="tel:+79113321111"
+          class="font-sans text-xl font-extrabold tracking-tight text-white transition-colors hover:text-yellow-400 sm:text-2xl lg:text-3xl"
+        >
+          +7&#8209;911&#8209;332&#8209;11&#8209;11
+        </a>
+      </address>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,77 @@
+---
+// Hero.astro — шапка лендинга услуг спецтехники
+---
+
+<section
+  class="relative overflow-hidden bg-[#111111] bg-cover bg-center"
+  style="background-image: url('https://placehold.co/1920x1080/11/333?text=Building');"
+>
+  <!-- Темный оверлей поверх фоновой картинки здания -->
+  <div class="absolute inset-0 bg-black/80" aria-hidden="true"></div>
+
+  <!-- Три желтые галочки в верхнем правом углу (абсолютное позиционирование) -->
+  <div
+    class="absolute right-4 top-4 z-20 flex items-center gap-1 text-yellow-400 sm:right-8 sm:top-6"
+    aria-hidden="true"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </div>
+
+  <div class="relative z-10 mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 md:py-24 lg:px-8">
+    <!-- Левая часть -->
+    <div class="flex flex-col items-start">
+      <h1 class="font-sans text-4xl font-extrabold uppercase leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Спецтехника
+        <span class="block text-yellow-400">для ваших задач</span>
+      </h1>
+
+      <!-- Список услуг через запятую / буллет -->
+      <p class="mt-4 text-sm font-medium text-gray-300 sm:text-base lg:text-lg">
+        Демонтаж&nbsp;&bull;&nbsp;Земляные работы&nbsp;&bull;&nbsp;Вывоз&nbsp;&bull;&nbsp;Благоустройство&nbsp;&bull;&nbsp;Аренда
+      </p>
+
+      <!-- Блок-плашка с желтой рамкой и иконкой часов -->
+      <div class="mt-8 flex items-center gap-3 rounded-sm border-2 border-yellow-400 px-4 py-3 sm:px-5 sm:py-4">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8 shrink-0 text-yellow-400 sm:h-10 sm:w-10"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <p class="text-xs font-extrabold uppercase leading-snug text-white sm:text-sm lg:text-base">
+          Оперативно! Подача техники<br class="hidden sm:block" /> в день обращения
+        </p>
+      </div>
+    </div>
+
+    <!-- Правая часть: изображение эвакуатора -->
+    <div class="relative">
+      <img
+        src="https://placehold.co/800x600/333/fff?text=Tow+Truck"
+        alt="Эвакуатор со спецтехникой на платформе"
+        class="w-full rounded-sm object-cover shadow-2xl shadow-black/60"
+        loading="eager"
+        width="800"
+        height="600"
+      />
+      <!-- Желтый декоративный уголок под картинкой -->
+      <div class="absolute -bottom-3 -right-3 -z-10 h-full w-full rounded-sm bg-yellow-400/20" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
